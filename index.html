@@ -10,7 +10,13 @@
 
 <body>
     <script>
-        let birth = prompt("Дата рождения. Какой год?");
+        
+        let birth;
+        birth = prompt("Дата рождения. Какой год?");
+        do {
+            alert("Работает валидатор! Введите цифры!");
+            birth = prompt("Дата рождения. Какой год?");
+        } while (isNaN(birth));
 
         let birth_result;
 

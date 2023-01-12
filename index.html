@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let birth = prompt("Дата рождения. Какой год?");
+
+        let birth_result;
+
+        if (birth === null) {
+            alert("Жаль что вы не захотели говорить год рождения");
+            birth_result = "Дату рождения указать не захотел";
+        } else {
+            birth_result = 2023 - birth;
+        }
+
+        let city = prompt("Город проживания. Какой?");
+
+        let city_result;
+
+        if (city === null) {
+            alert("Жаль что вы не захотели говорить город");
+            city_result = "Город указать не захотел";
+        } else if (city == "Киев" || city == "Вашингтон" || city == "Лондон") {
+            city_result = `Ты живешь в столице ${city}`;
+        } else {
+            city_result = `ти живеш у місті ${city} `;
+        }
+
+        let favourite = prompt("Любимый вид спорта. Какой?");
+
+        let favourite_result;
+        
+        if (favourite === null) {
+            alert("Жаль что вы не захотели говорить вид спорта");
+            favourite_result = "Вид спорта указать не захотел";
+        } else if (favourite == "Бокс") {
+            favourite_result = "Круто! Хочеш стати Флойдом Мейвезером!"
+        } else if (favourite == "Пауэрлифтинг") {
+            favourite_result = "Круто! Хочеш стати Василем Вирастюком!"
+        } else if (favourite == "Футбол") {
+            favourite_result = "Круто! Хочеш стати Лионель Месси!"
+        } else {
+            favourite_result = "Круто! Хочеш стати ЧЕМПИОНОМ ПО ВСЕМ ВИДАМ СПОРТА!"
+        }
+
+        alert(`${birth_result}\n ${city_result}\n ${favourite_result}`);
+
+    </script>
+</body>
+
+</html>
